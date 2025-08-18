@@ -1,0 +1,104 @@
+name: Initialize Spec-Up-T Project
+
+on:
+  workflow_dispatch:
+
+env:
+  PROJECT_NAME: "2025-08-18-test-repo-1"
+  PROJECT_DESCRIPTION: "xxx"
+  SPEC_TITLE: "2025-08-18-test-repo-1"
+  SPEC_VERSION: "1.0.0"
+  AUTHORS: ""
+
+jobs:
+  initialize:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install create-spec-up-t
+        run: npm install -g create-spec-up-t
+
+      - name: Create project structure
+        run: |
+          npx create-spec-up-t temp-project
+          # Copy everything except .github/workflows to avoid permission issues
+          find temp-project -maxdepth 1 -not -name temp-project -not -name .git -not -name .github -exec cp -r {} . \;
+          # Copy .github directory but exclude workflows
+          mkdir -p .github
+          find temp-project/.github -maxdepth 1 -not -name .github -not -name workflows -exec cp -r {} .github/ \; 2>/dev/null || true
+          rm -rf temp-project
+
+      - name: Customize configuration
+        run: |
+          if [ -f "specs.json" ]; then
+            node -e "
+              const fs = require('fs');
+              const config = JSON.parse(fs.readFileSync('specs.json', 'utf8'));
+              if (config.specs && config.specs[0]) {
+                config.specs[0].title = process.env.SPEC_TITLE;
+                config.specs[0].version = process.env.SPEC_VERSION;
+                if (process.env.AUTHORS) {
+                  config.specs[0].editors = process.env.AUTHORS.split(',').map(a => ({name: a.trim()}));
+                }
+              }
+              fs.writeFileSync('specs.json', JSON.stringify(config, null, 2));
+            "
+          fi
+
+      - name: Update package.json
+        run: |
+          if [ -f "package.json" ]; then
+            node -e "
+              const fs = require('fs');
+              const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+              pkg.name = process.env.PROJECT_NAME;
+              pkg.description = process.env.PROJECT_DESCRIPTION;
+              pkg.version = process.env.SPEC_VERSION;
+              fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2));
+            "
+          fi
+
+      - name: Update README
+        run: |
+          if [ -f "README.md" ]; then
+            echo "# $PROJECT_NAME" > README.md
+            if [ -n "$PROJECT_DESCRIPTION" ]; then
+              echo "" >> README.md
+              echo "$PROJECT_DESCRIPTION" >> README.md
+            fi
+            if [ -n "$AUTHORS" ]; then
+              echo "" >> README.md
+              echo "## Authors" >> README.md
+              echo "" >> README.md
+              echo "$AUTHORS" >> README.md
+            fi
+          fi
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          # Show what files we're about to commit for debugging
+          echo "Files to be committed:"
+          git status --porcelain
+          git add .
+          git commit -m "Initialize Spec-Up-T project: $PROJECT_NAME" || echo "No changes to commit"
+          git push origin main
+
+      - name: Clean up
+        run: |
+          git rm .github/workflows/initialize-spec-up-t.yml || echo "File not found"
+          git commit -m "Remove initialization workflow" || echo "No changes to commit"
+          git push origin main || echo "Nothing to push"
