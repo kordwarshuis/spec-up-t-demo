@@ -18,8 +18,9 @@
       "favicon": "https://raw.githubusercontent.com/trustoverip/spec-up-t/refs/heads/master/src/install-from-boilerplate/boilerplate/static/favicon.ico",
       "source": {
         "host": "github",
-        "account": "trustoverip",
-        "repo": "spec-up-t-starter-pack"
+        "account": "kordwarshuis",
+        "repo": "2025-08-18-test-repo-1",
+        "branch": "main"
       },
       "external_specs": [
         {
