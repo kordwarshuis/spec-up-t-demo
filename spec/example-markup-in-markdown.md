@@ -83,6 +83,8 @@ No more;
 
 ### Content Insertion
 
+**⚠️ Note: The `[[insert:]]` functionality shown below is NOT currently implemented and will not work. This is placeholder documentation for future functionality.**
+
 Use the following format to pull in content from other files in your project:
 
 <pre>
