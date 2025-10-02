@@ -2,7 +2,7 @@
 
 ~ Soil is the upper layer of earth in which plants grow. It consists of a mixture of organic matter, minerals, gases, liquids, and organisms that together support life. Healthy soil is essential for gardening and agriculture.
 
-~ Refs examples: [[ref: Compost]], [[ref: Mulch]], [[ref: Fertilizer]].
+~ Refs examples: [[ref: compost]], [[ref: composting]], [[ref: Compost]], [[ref: Mulch]], [[ref: Fertilizer]].
 
 ~ Xref example: [[xref: KERISuite, composability, korposability,korposability2 ]]
 
