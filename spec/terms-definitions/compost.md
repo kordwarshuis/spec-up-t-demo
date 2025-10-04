@@ -9,3 +9,5 @@
 ~ [[ref: Kompoosabilitie]]
 
 ~ [[ref: KPB]]
+
+~ Link to a [wikipedia page](https://en.wikipedia.org/wiki/Web_of_trust)
