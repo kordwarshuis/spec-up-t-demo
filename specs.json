@@ -46,6 +46,12 @@
           "gh_page": "https://trustoverip.github.io/ctwg-general-glossary/",
           "url": "https://github.com/trustoverip/ctwg-general-glossary",
           "terms_dir": "spec/terms-definitions"
+        },
+        {
+          "external_spec": "kor-test",
+          "gh_page": "https://kordwarshuis.github.io/ctwg-main-glossary/",
+          "url": "https://github.com/kordwarshuis/ctwg-main-glossary",
+          "terms_dir": "spec/terms-definitions"
         }
       ],
       "katex": false,

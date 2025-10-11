@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Project Health Check</title>
+  <title>Spec-Up-T Project Health Check</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
   <style>
@@ -74,18 +74,18 @@
     <div class="report-header">
     <h1>
       <i class="bi bi-heart-pulse text-primary"></i>
-      My Project Health Check
+      Spec-Up-T Project Health Check
     </h1>
     <p class="timestamp">
       <i class="bi bi-clock"></i>
-      Generated: 9/19/2025, 1:35:34 PM
+      Generated: 10/11/2025, 12:47:50 PM
     </p>
     <p class="repo-info">
       <i class="bi bi-folder"></i>
-      Repository: .
+      Repository: /Users/kor/webdev/Blockchain-Bird/KERI/Spec-Up/test/2025-08-18-omtetesten
     </p><p class="repo-info">
       <i class="bi bi-link-45deg"></i>
-      URL: <a href="https://github.com/user/repo" target="_blank">https://github.com/user/repo</a>
+      URL: <a href="file:///Users/kor/webdev/Blockchain-Bird/KERI/Spec-Up/test/2025-08-18-omtetesten" target="_blank">file:///Users/kor/webdev/Blockchain-Bird/KERI/Spec-Up/test/2025-08-18-omtetesten</a>
     </p>
   </div>
     <div class="card summary-card mb-4">
@@ -112,11 +112,11 @@
               <small class="text-muted">Total</small>
             </div>
             <div class="col-6 col-md-3 text-center mb-3">
-              <div class="h4 mb-1 text-success">1</div>
+              <div class="h4 mb-1 text-success">2</div>
               <small class="text-muted">Passed</small>
             </div>
             <div class="col-6 col-md-3 text-center mb-3">
-              <div class="h4 mb-1 text-danger">1</div>
+              <div class="h4 mb-1 text-danger">0</div>
               <small class="text-muted">Failed</small>
             </div>
             <div class="col-6 col-md-3 text-center mb-3">
@@ -124,13 +124,13 @@
               <small class="text-muted">Warnings</small>
             </div>
           </div>
-          <div class="overall-status-fail">
-            <i class="bi bi-x-circle-fill status-icon"></i>
-            <strong>Overall Status: FAILED</strong>
+          <div class="overall-status-warning">
+            <i class="bi bi-exclamation-triangle-fill status-icon"></i>
+            <strong>Overall Status: PASSED WITH WARNINGS</strong>
           </div>
         </div>
         <div class="col-md-4 text-center">
-          <div class="health-score text-danger">33%</div>
+          <div class="health-score text-warning">67%</div>
           <small class="text-muted">Health Score</small>
         </div>
       </div>
@@ -163,14 +163,14 @@
         package.json is valid but missing recommended fields: author
         
       </td>
-    </tr><tr data-status="fail" class="check-row table-danger">
-      <td class="text-danger status-badge">
-        <i class="bi bi-x-circle-fill status-icon"></i>
-        <span>Fail</span>
+    </tr><tr data-status="pass" class="check-row table-success">
+      <td class="text-success status-badge">
+        <i class="bi bi-check-circle-fill status-icon"></i>
+        <span>Pass</span>
       </td>
       <td>specs-json</td>
       <td>
-        specs.json has 1 error(s)
+        specs.json is valid
         
       </td>
     </tr><tr data-status="pass" class="check-row table-success">
