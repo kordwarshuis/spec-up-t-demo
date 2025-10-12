@@ -9,3 +9,4 @@ coverage
 build
 .history
 /.cache/
+health-report.html
