@@ -18,8 +18,14 @@
 
 ~ [[xref: vLEI, GLEIF]]
 
-~ [[xref: ToIP, address]]
+~ An xref with term: [[xref: ToIP, address]]
 
-~ [[xref: ToIP, addressess]]
+~ An xref with alias: [[xref: ToIP, address, address1]]
+
+~ An xref with two aliases: [[xref: ToIP, address, address1, address2]]
+
+~ An xref with three aliases: [[xref: ToIP, address, address1, address2, address3]]
 
 ~ [[xref: ToIP, addressing]]
+
+~ An xref to a tref [[xref: KERISuite, identity-assurance ]]

@@ -1,0 +1,1 @@
+[[tref: KERIsuite, compact-disclosure]]

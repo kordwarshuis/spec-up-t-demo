@@ -7,6 +7,7 @@
 ~ Xref example: [[xref: KERISuite, composability, korposability,korposability2 ]]
 
 ~ Xref example: [[xref: kor-test, accreditation]]
+~ Xref example: [[xref: kor-test, accreditation-blah]]
 
 ~ Xref example: [[xref: kor-test, accreditation, akkreditation ]]
 
