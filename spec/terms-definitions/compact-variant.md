@@ -1,1 +1,0 @@
-[[tref: KERISuite, compact-variant]]

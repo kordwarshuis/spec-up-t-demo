@@ -64,6 +64,16 @@ No more;
 :::
 
 <pre>
+::: informative Additional Context
+  Here's some helpful information that's subtle and non-intrusive.
+:::
+</pre>
+
+::: informative Additional Context
+  Here's some helpful information that's subtle and non-intrusive.
+:::
+
+<pre>
 ::: example Code Example
   Put your code block here
 :::
@@ -82,8 +92,6 @@ No more;
 :::
 
 ### Content Insertion
-
-**⚠️ Note: The `[[insert:]]` functionality shown below is NOT currently implemented and will not work. This is placeholder documentation for future functionality.**
 
 Use the following format to pull in content from other files in your project:
 

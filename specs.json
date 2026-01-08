@@ -1,7 +1,7 @@
 {
   "specs": [
     {
-      "title": "2025-08-18-test-repo-1",
+      "title": "Spec-Up-T Starterpack",
       "description": "Create technical specifications in markdown. Based on the original Spec-Up, extended with Terminology tooling",
       "author": "Trust over IP Foundation",
       "spec_directory": "./spec",
@@ -18,11 +18,23 @@
       "favicon": "https://raw.githubusercontent.com/trustoverip/spec-up-t/refs/heads/master/src/install-from-boilerplate/boilerplate/static/favicon.ico",
       "source": {
         "host": "github",
-        "account": "kordwarshuis",
-        "repo": "2025-08-18-test-repo-1",
+        "account": "trustoverip",
+        "repo": "spec-up-t-starter-pack",
         "branch": "main"
       },
       "external_specs": [
+        {
+          "external_spec": "ExtRef1",
+          "gh_page": "https://trustoverip.github.io/spec-up-t-demo-external-ref-1/",
+          "url": "https://github.com/trustoverip/spec-up-t-demo-external-ref-1",
+          "terms_dir": "spec/terms-definitions"
+        },
+        {
+          "external_spec": "ExtRef2",
+          "gh_page": "https://trustoverip.github.io/spec-up-t-demo-external-ref-2/",
+          "url": "https://github.com/trustoverip/spec-up-t-demo-external-ref-2",
+          "terms_dir": "spec/terms-definitions"
+        },
         {
           "external_spec": "vLEI",
           "gh_page": "https://henkvancann.github.io/vlei-glossary/",
@@ -46,17 +58,10 @@
           "gh_page": "https://trustoverip.github.io/ctwg-general-glossary/",
           "url": "https://github.com/trustoverip/ctwg-general-glossary",
           "terms_dir": "spec/terms-definitions"
-        },
-        {
-          "external_spec": "kor-test",
-          "gh_page": "https://kordwarshuis.github.io/ctwg-main-glossary/",
-          "url": "https://github.com/kordwarshuis/ctwg-main-glossary",
-          "terms_dir": "spec/terms-definitions"
         }
       ],
       "katex": false,
-      "anchor_symbol": "§",
-      "version": "1.0.0"
+      "anchor_symbol": "§"
     }
   ]
 }
