@@ -1,7 +1,7 @@
 {
   "specs": [
     {
-      "title": "Spec-Up-T Starterpack",
+      "title": "Spec-Up-T Demo",
       "description": "Create technical specifications in markdown. Based on the original Spec-Up, extended with Terminology tooling",
       "author": "Trust over IP Foundation",
       "spec_directory": "./spec",
