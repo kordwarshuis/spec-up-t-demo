@@ -1,4 +1,4 @@
-node_modules
+node_modules/
 *.log
 dist
 *.bak
@@ -7,6 +7,8 @@ dist
 .env
 coverage
 build
-.history
+.history/
 /.cache/
 health-report.html
+
+
