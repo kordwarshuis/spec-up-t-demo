@@ -19,8 +19,7 @@
       "source": {
         "host": "github",
         "account": "kordwarshuis",
-        "repo": "spec-up-t-demo",
-        "branch": "main"
+        "repo": "spec-up-t-demo"
       },
       "external_specs": [
         {
