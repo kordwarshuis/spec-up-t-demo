@@ -10,5 +10,5 @@ build
 .history/
 /.cache/
 health-report.html
-
-
+node_modules
+.history
